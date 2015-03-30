@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simple Map</title>
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false&amp;language=fr&amp;libraries=places"></script>
+	<script type="text/javascript" src="fichier.js"></script>
+</head>
+<body>
+	<h1>My Map</h1>
+	<div id="map-canvas"></div>
+	<div id="button">
+		<button onclick="FullScreen()">FullScreen</button>
+		<button onclick="NormalScreen()">Normal Screen</button>
+	</div>
+	<div id="form-iti">
+		<form action="#" method="get" name="direction" id="direction">
+		<label>Point de départ :</label>
+		<input type="text" name="origin" id="origin" />
+		<select id="mode" onchange="calculate();">
+			<option value="DRIVING">Driving</option>
+			<option value="WALKING">Walking</option>
+			<option value="BICYCLING">Bicycling</option>
+		</select>
+		<h2>Waypoints:</h2>
+		<p>(Ctrl-Click for multiple selection)</p>
+		<select multiple id="waypoints">
+			<option value="Pyramids of Giza, Egypte">Les Pyramides de Gizeh</option>
+			<option value="Great Sphinx of Giza, Egypte">Le Sphinx de Gizeh</option>
+			<option value="Stonehenge, Amesbury">Stonehenge</option>
+			<option value="The Acropolis of Athens, Athenes">L’Acropole d’Athènes</option>
+			<option value="The Wailing Wall, Jerusalem">Le Mur des Lamentations</option>
+			<option value="the Colosseum, Italy">Le Colisée</option>
+			<option value="Petra, Petra">Pétra</option>
+			<option value="The Alhambra, Spain">L'Alhambra</option>
+			<option value="The Leaning Tower, Italy">La Tour de Pise</option>
+			<option value="The Forbidden City, Pekin">La Cité interdite</option>
+			<option value="Machu Picchu, Peru">Machu Picchu</option>
+			<option value="The Great Wall of China, China">La Grande Muraille de Chine</option>
+			<option value="St. Basil's Cathedral, Moscow">La Cathédrale Saint-Basile</option>
+			<option value="The Taj Mahal, Agra">Le Taj Mahal</option>
+			<option value="The Palace of Versailles, Versailles">Le Château de Versailles</option>
+			<option value="The White House, Washington">La Maison Blanche</option>
+			<option value="Big Ben, London">Big Ben</option>
+			<option value="The Statue of Liberty, New York">La Statue de la liberté</option>
+			<option value="The Eiffel Tower, Paris">La Tour Eiffel</option>
+			<option value="The Louvre Museum, Paris">Le Musée du Louvre</option>
+			<option value="The Golden Gate Bridge, San Francisco">Le Pont du Golden Gate</option>
+			<option value="Sydney Opera House, Sydney">L'Opéra de Sydney</option>
+			<option value="La Sagrada Familia, Spain">La Sagrada Familia</option>
+		</select>
+		<label>Destination :</label>
+		<input type="text" name="destination" id="destination" />
+		<input type="button" value="Calculer l'itinéraire" onclick="calculate()">
+	</form>
+	<div id="autocompletion">
+		<input id="pac-input" class="controls" type="text"
+		placeholder="Enter a location">
+		<div id="type-selector" class="controls">
+			<input type="radio" name="type" id="changetype-all" checked="checked">
+			<label for="changetype-all">All</label>
+
+			<input type="radio" name="type" id="changetype-establishment">
+			<label for="changetype-establishment">Establishments</label>
+
+			<input type="radio" name="type" id="changetype-address">
+			<label for="changetype-address">Addresses</label>
+
+			<input type="radio" name="type" id="changetype-geocode">
+			<label for="changetype-geocode">Geocodes</label>
+		</div>
+	</div>
+</div>
+<div id="panel"></div>
+</body>
+</html>

@@ -1,0 +1,67 @@
+html, body
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+#map-canvas
+{
+	height: 600px;
+	width: 800px;
+	margin-left: 30%;
+}
+
+button
+{
+	color: black;
+	font-weight: bold;
+	font-size: 20px;
+	background: white;
+	margin-bottom: 30px;
+	margin-left: 30%;
+	margin-right: -50px;
+}
+
+h1
+{
+	font-weight: bold;
+	font-size: 30px;
+	text-align: center;
+	color: white;
+}
+
+#form-iti, label
+{
+	color: white;
+	font-size: 20px;
+}
+
+#pac-input:focus
+{
+	border-color: #4d90fe;
+	margin-left: -1px;
+	padding-left: 14px;
+	width: 401px;
+}
+
+.pac-container
+{
+	font-family: Verdana;
+}
+
+#type-selector
+{
+	color: #fff;
+	background-color: #4d90fe;
+	padding: 5px 11px 0px 11px;
+}
+
+#type-selector label
+{
+	font-family: Verdana;
+	font-size: 13px;
+	font-weight: 300;
+}
